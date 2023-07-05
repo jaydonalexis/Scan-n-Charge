@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element Frame_Sync
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element System_Clock
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element Video_In_Clipper
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element Video_In_Converter
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element Video_In_Decoder
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element Video_In_Feed_Forward
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element Video_In_Resampler
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element Video_In_Scaler
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CSEMA5F31C6" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName">DE1_SoC_Computer.qpf</parameter>
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="clk" internal="System_Clock.clk_in" type="clock" dir="end" />
+ <interface
+   name="reset"
+   internal="System_Clock.clk_in_reset"
+   type="reset"
+   dir="end" />
+ <interface
+   name="rgba_image"
+   internal="Video_In_Feed_Forward.conduit"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="stream_control"
+   internal="Frame_Sync.conduit"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="video_in"
+   internal="Video_In_Decoder.external_interface"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="video_in_feed_forward_avalon_forward_sink"
+   internal="Video_In_Feed_Forward.avalon_forward_sink"
+   type="avalon_streaming"
+   dir="end" />
+ <interface
+   name="video_in_scaler_avalon_scaler_source"
+   internal="Video_In_Scaler.avalon_scaler_source"
+   type="avalon_streaming"
+   dir="start" />
+ <module name="Frame_Sync" kind="Frame_Sync" version="1.0" enabled="1" />
+ <module name="System_Clock" kind="clock_source" version="17.1" enabled="1">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   name="Video_In_Clipper"
+   kind="altera_up_avalon_video_clipper"
+   version="17.1"
+   enabled="1">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="add_bottom" value="0" />
+  <parameter name="add_left" value="0" />
+  <parameter name="add_right" value="0" />
+  <parameter name="add_top" value="0" />
+  <parameter name="add_value_plane_1" value="0" />
+  <parameter name="add_value_plane_2" value="0" />
+  <parameter name="add_value_plane_3" value="0" />
+  <parameter name="add_value_plane_4" value="0" />
+  <parameter name="color_bits" value="8" />
+  <parameter name="color_planes" value="3" />
+  <parameter name="drop_bottom" value="2" />
+  <parameter name="drop_left" value="40" />
+  <parameter name="drop_right" value="40" />
+  <parameter name="drop_top" value="2" />
+  <parameter name="height_in" value="244" />
+  <parameter name="width_in" value="720" />
+ </module>
+ <module
+   name="Video_In_Converter"
+   kind="altera_up_avalon_video_csc"
+   version="17.1"
+   enabled="1">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="csc_type">444 YCrCb to 24-bit RGB</parameter>
+ </module>
+ <module
+   name="Video_In_Decoder"
+   kind="altera_up_avalon_video_decoder"
+   version="17.1"
+   enabled="1">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="video_source">On-board Video In (NTSC or PAL)</parameter>
+ </module>
+ <module
+   name="Video_In_Feed_Forward"
+   kind="Feed_Forward"
+   version="1.0"
+   enabled="1">
+  <parameter name="EW" value="1" />
+  <parameter name="IDW" value="23" />
+  <parameter name="ODW" value="31" />
+ </module>
+ <module
+   name="Video_In_Resampler"
+   kind="altera_up_avalon_video_chroma_resampler"
+   version="17.1"
+   enabled="1">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="input_type" value="YCrCb 422" />
+  <parameter name="output_type" value="YCrCb 444" />
+ </module>
+ <module
+   name="Video_In_Scaler"
+   kind="altera_up_avalon_video_scaler"
+   version="17.1"
+   enabled="1">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="color_bits" value="8" />
+  <parameter name="color_planes" value="3" />
+  <parameter name="height_in" value="240" />
+  <parameter name="height_scaling" value="2" />
+  <parameter name="include_channel" value="false" />
+  <parameter name="width_in" value="640" />
+  <parameter name="width_scaling" value="1" />
+ </module>
+ <connection
+   kind="avalon_streaming"
+   version="17.1"
+   start="Video_In_Resampler.avalon_chroma_source"
+   end="Video_In_Converter.avalon_csc_sink" />
+ <connection
+   kind="avalon_streaming"
+   version="17.1"
+   start="Video_In_Clipper.avalon_clipper_source"
+   end="Video_In_Scaler.avalon_scaler_sink" />
+ <connection
+   kind="avalon_streaming"
+   version="17.1"
+   start="Video_In_Converter.avalon_csc_source"
+   end="Video_In_Clipper.avalon_clipper_sink" />
+ <connection
+   kind="avalon_streaming"
+   version="17.1"
+   start="Video_In_Decoder.avalon_decoder_source"
+   end="Video_In_Resampler.avalon_chroma_sink" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="System_Clock.clk"
+   end="Video_In_Decoder.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="System_Clock.clk"
+   end="Video_In_Resampler.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="System_Clock.clk"
+   end="Video_In_Converter.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="System_Clock.clk"
+   end="Video_In_Clipper.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="System_Clock.clk"
+   end="Video_In_Scaler.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="System_Clock.clk"
+   end="Video_In_Feed_Forward.clock" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="System_Clock.clk"
+   end="Frame_Sync.clock" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="System_Clock.clk_reset"
+   end="Video_In_Decoder.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="System_Clock.clk_reset"
+   end="Video_In_Resampler.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="System_Clock.clk_reset"
+   end="Video_In_Converter.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="System_Clock.clk_reset"
+   end="Video_In_Clipper.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="System_Clock.clk_reset"
+   end="Video_In_Scaler.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="System_Clock.clk_reset"
+   end="Video_In_Feed_Forward.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="System_Clock.clk_reset"
+   end="Frame_Sync.reset" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

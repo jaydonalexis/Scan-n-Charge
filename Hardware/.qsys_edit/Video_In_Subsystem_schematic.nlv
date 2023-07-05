@@ -1,0 +1,26 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst Video_In_Subsystem.Frame_Sync -pg 1 -lvl 7 -y 260
+preplace inst Video_In_Subsystem.Video_In_Scaler -pg 1 -lvl 11 -y 80
+preplace inst Video_In_Subsystem.System_Clock -pg 1 -lvl 1 -y 100
+preplace inst Video_In_Subsystem.Video_In_Converter -pg 1 -lvl 9 -y 100
+preplace inst Video_In_Subsystem.Video_In_Clipper -pg 1 -lvl 10 -y 70
+preplace inst Video_In_Subsystem.Video_In_Feed_Forward -pg 1 -lvl 7 -y 160
+preplace inst Video_In_Subsystem.Video_In_Decoder -pg 1 -lvl 7 -y 60
+preplace inst Video_In_Subsystem -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst Video_In_Subsystem.Video_In_Resampler -pg 1 -lvl 8 -y 80
+preplace netloc EXPORT<net_container>Video_In_Subsystem</net_container>(SLAVE)Frame_Sync.conduit,(SLAVE)Video_In_Subsystem.stream_control) 1 0 7 NJ 290 NJ 290 NJ 290 NJ 290 NJ 290 NJ 290 NJ
+preplace netloc EXPORT<net_container>Video_In_Subsystem</net_container>(SLAVE)Video_In_Subsystem.rgba_image,(SLAVE)Video_In_Feed_Forward.conduit) 1 0 7 NJ 210 NJ 210 NJ 210 NJ 210 NJ 210 NJ 210 NJ
+preplace netloc EXPORT<net_container>Video_In_Subsystem</net_container>(SLAVE)System_Clock.clk_in,(SLAVE)Video_In_Subsystem.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>Video_In_Subsystem</net_container>(SLAVE)System_Clock.clk_in_reset,(SLAVE)Video_In_Subsystem.reset) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>Video_In_Subsystem</net_container>(SLAVE)Video_In_Resampler.avalon_chroma_sink,(MASTER)Video_In_Decoder.avalon_decoder_source) 1 7 1 N
+preplace netloc EXPORT<net_container>Video_In_Subsystem</net_container>(SLAVE)Video_In_Decoder.external_interface,(SLAVE)Video_In_Subsystem.video_in) 1 0 7 NJ 90 NJ 90 NJ 90 NJ 90 NJ 90 NJ 90 NJ
+preplace netloc FAN_OUT<net_container>Video_In_Subsystem</net_container>(SLAVE)Video_In_Decoder.reset,(SLAVE)Video_In_Scaler.reset,(SLAVE)Frame_Sync.reset,(SLAVE)Video_In_Converter.reset,(SLAVE)Video_In_Feed_Forward.reset,(SLAVE)Video_In_Clipper.reset,(MASTER)System_Clock.clk_reset,(SLAVE)Video_In_Resampler.reset) 1 1 10 410 310 NJ 310 NJ 310 NJ 310 NJ 310 1760 30 2240 50 2460 90 2680 40 2980
+preplace netloc POINT_TO_POINT<net_container>Video_In_Subsystem</net_container>(MASTER)Video_In_Clipper.avalon_clipper_source,(SLAVE)Video_In_Scaler.avalon_scaler_sink) 1 10 1 2940
+preplace netloc POINT_TO_POINT<net_container>Video_In_Subsystem</net_container>(MASTER)Video_In_Converter.avalon_csc_source,(SLAVE)Video_In_Clipper.avalon_clipper_sink) 1 9 1 2720
+preplace netloc EXPORT<net_container>Video_In_Subsystem</net_container>(MASTER)Video_In_Subsystem.video_in_scaler_avalon_scaler_source,(MASTER)Video_In_Scaler.avalon_scaler_source) 1 11 1 N
+preplace netloc EXPORT<net_container>Video_In_Subsystem</net_container>(SLAVE)Video_In_Subsystem.video_in_feed_forward_avalon_forward_sink,(SLAVE)Video_In_Feed_Forward.avalon_forward_sink) 1 0 7 NJ 170 NJ 170 NJ 170 NJ 170 NJ 170 NJ 170 NJ
+preplace netloc FAN_OUT<net_container>Video_In_Subsystem</net_container>(SLAVE)Video_In_Resampler.clk,(MASTER)System_Clock.clk,(SLAVE)Video_In_Decoder.clk,(SLAVE)Video_In_Feed_Forward.clock,(SLAVE)Video_In_Clipper.clk,(SLAVE)Frame_Sync.clock,(SLAVE)Video_In_Scaler.clk,(SLAVE)Video_In_Converter.clk) 1 1 10 430 230 NJ 230 NJ 230 NJ 230 NJ 230 1740 50 2220 70 2480 70 2700 60 2960
+preplace netloc POINT_TO_POINT<net_container>Video_In_Subsystem</net_container>(SLAVE)Video_In_Converter.avalon_csc_sink,(MASTER)Video_In_Resampler.avalon_chroma_source) 1 8 1 N
+levelinfo -pg 1 0 200 3420
+levelinfo -hier Video_In_Subsystem 210 240 460 810 1230 1500 1720 1940 2270 2510 2750 3010 3200

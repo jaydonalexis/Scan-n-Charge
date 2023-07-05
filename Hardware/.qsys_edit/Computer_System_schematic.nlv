@@ -1,0 +1,98 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst Computer_System.ARM_A9_HPS.fpga_interfaces -pg 1
+preplace inst Computer_System.ARM_A9_HPS.arm_a9_0 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.axi_ocram -pg 1
+preplace inst Computer_System.ARM_A9_HPS.clkmgr -pg 1
+preplace inst Computer_System.ARM_A9_HPS.arm_a9_1 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.clk_0 -pg 1
+preplace inst Computer_System.Video_Subsystem.Video_In_Scaler -pg 1
+preplace inst Computer_System.Video_Subsystem -pg 1 -lvl 2 -y 50
+preplace inst Computer_System.ARM_A9_HPS.wd_timer0 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.hps_io -pg 1
+preplace inst Computer_System.ARM_A9_HPS.wd_timer1 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.f2s_periph_ref_clk -pg 1
+preplace inst Computer_System.ARM_A9_HPS.i2c0 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.qspi -pg 1
+preplace inst Computer_System.ARM_A9_HPS.i2c1 -pg 1
+preplace inst Computer_System.Video_Subsystem.Frame_Sync -pg 1
+preplace inst Computer_System.ARM_A9_HPS.i2c2 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.uart0 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.i2c3 -pg 1
+preplace inst Computer_System.Clock_Bridge -pg 1 -lvl 2 -y 230
+preplace inst Computer_System.ARM_A9_HPS.uart1 -pg 1
+preplace inst Computer_System.ARM_A9_HPS -pg 1 -lvl 7 -y 340
+preplace inst Computer_System.ARM_A9_HPS.L2 -pg 1
+preplace inst Computer_System.SDRAM_Controller -pg 1 -lvl 8 -y 690
+preplace inst Computer_System.System_PLL.reset_from_locked -pg 1
+preplace inst Computer_System.Avalon_Frame_Writer -pg 1 -lvl 6 -y 490
+preplace inst Computer_System.ARM_A9_HPS.fpgamgr -pg 1
+preplace inst Computer_System.ARM_A9_HPS.eosc1 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.gpio0 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.eosc2 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.gpio1 -pg 1
+preplace inst Computer_System.Video_Subsystem.Video_In_Decoder -pg 1
+preplace inst Computer_System.PLL_VGA -pg 1 -lvl 2 -y 330
+preplace inst Computer_System.ARM_A9_HPS.gpio2 -pg 1
+preplace inst Computer_System.System_PLL -pg 1 -lvl 1 -y 2290
+preplace inst Computer_System.ARM_A9_HPS.usb0 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.axi_sdram -pg 1
+preplace inst Computer_System.ARM_A9_HPS.usb1 -pg 1
+preplace inst Computer_System.Video_Subsystem.Video_In_Resampler -pg 1
+preplace inst Computer_System.Dot_Product -pg 1 -lvl 8 -y 260
+preplace inst Computer_System.AV_Config -pg 1 -lvl 4 -y 1030
+preplace inst Computer_System.ARM_A9_HPS.dcan0 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.dcan1 -pg 1
+preplace inst Computer_System.Video_Subsystem.System_Clock -pg 1
+preplace inst Computer_System.System_ID -pg 1 -lvl 2 -y 410
+preplace inst Computer_System.ARM_A9_HPS.nand0 -pg 1
+preplace inst Computer_System.Video_Subsystem.Video_In_Clipper -pg 1
+preplace inst Computer_System.ARM_A9_HPS.sdrctl -pg 1
+preplace inst Computer_System.ARM_A9_HPS.spim0 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.rstmgr -pg 1
+preplace inst Computer_System.ARM_A9_HPS.spim1 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.hps_io.border -pg 1
+preplace inst Computer_System.ARM_A9_HPS.l3regs -pg 1
+preplace inst Computer_System.ARM_A9_HPS.scu -pg 1
+preplace inst Computer_System.SRAM1 -pg 1 -lvl 8 -y 360
+preplace inst Computer_System.SRAM2 -pg 1 -lvl 8 -y 610
+preplace inst Computer_System.Video_Subsystem.Video_In_Feed_Forward -pg 1
+preplace inst Computer_System.Video_Subsystem.Video_In_Converter -pg 1
+preplace inst Computer_System.ARM_A9_HPS.timer -pg 1
+preplace inst Computer_System.ARM_A9_HPS.timer0 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.f2s_sdram_ref_clk -pg 1
+preplace inst Computer_System.ARM_A9_HPS.arm_gic_0 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.timer1 -pg 1
+preplace inst Computer_System.System_PLL.sys_pll -pg 1
+preplace inst Computer_System.ARM_A9_HPS.timer2 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.sdmmc -pg 1
+preplace inst Computer_System.ARM_A9_HPS.timer3 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.bridges -pg 1
+preplace inst Computer_System.ARM_A9_HPS.gmac0 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.gmac1 -pg 1
+preplace inst Computer_System.ARM_A9_HPS.sysmgr -pg 1
+preplace inst Computer_System -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst Computer_System.ARM_A9_HPS.dma -pg 1
+preplace netloc EXPORT<net_container>Computer_System</net_container>(SLAVE)Computer_System.system_pll_ref_clk,(SLAVE)System_PLL.ref_clk) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>Computer_System</net_container>(MASTER)ARM_A9_HPS.h2f_lw_axi_master,(SLAVE)Dot_Product.avalon_slave,(SLAVE)AV_Config.avalon_av_config_slave) 1 3 5 1180 1020 NJ 1020 NJ 1020 NJ 1020 3040
+preplace netloc FAN_OUT<net_container>Computer_System</net_container>(SLAVE)Dot_Product.reset,(SLAVE)Video_Subsystem.reset,(SLAVE)AV_Config.reset,(SLAVE)PLL_VGA.reset,(SLAVE)SRAM1.reset1,(SLAVE)SRAM2.reset1,(MASTER)System_PLL.reset_source,(SLAVE)System_ID.reset,(SLAVE)Avalon_Frame_Writer.reset,(SLAVE)SDRAM_Controller.reset) 1 1 7 490 280 NJ 300 1140 540 NJ 540 2030 300 NJ 300 3060
+preplace netloc EXPORT<net_container>Computer_System</net_container>(SLAVE)Video_Subsystem.video_in_feed_forward_avalon_forward_sink,(SLAVE)Computer_System.video_subsystem_video_in_feed_forward_avalon_forward_sink) 1 0 2 NJ 180 NJ
+preplace netloc EXPORT<net_container>Computer_System</net_container>(SLAVE)SDRAM_Controller.wire,(SLAVE)Computer_System.sdram_ctrl) 1 0 8 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ
+preplace netloc EXPORT<net_container>Computer_System</net_container>(MASTER)Computer_System.video_subsystem_video_in_scaler_avalon_scaler_source,(MASTER)Video_Subsystem.video_in_scaler_avalon_scaler_source) 1 2 7 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ
+preplace netloc EXPORT<net_container>Computer_System</net_container>(SLAVE)Computer_System.av_config,(SLAVE)AV_Config.external_interface) 1 0 4 NJ 1080 NJ 1080 NJ 1080 NJ
+preplace netloc EXPORT<net_container>Computer_System</net_container>(SLAVE)Video_Subsystem.rgba_image,(SLAVE)Computer_System.rgba_image_src) 1 0 2 NJ 100 NJ
+preplace netloc POINT_TO_POINT<net_container>Computer_System</net_container>(SLAVE)ARM_A9_HPS.f2h_sdram1_data,(MASTER)Avalon_Frame_Writer.avalon_master) 1 6 1 2730
+preplace netloc EXPORT<net_container>Computer_System</net_container>(SLAVE)Video_Subsystem.video_in,(SLAVE)Computer_System.video_in) 1 0 2 NJ 140 NJ
+preplace netloc FAN_OUT<net_container>Computer_System</net_container>(SLAVE)ARM_A9_HPS.f2h_sdram0_clock,(SLAVE)ARM_A9_HPS.h2f_lw_axi_clock,(SLAVE)System_ID.clk,(SLAVE)Avalon_Frame_Writer.clock,(SLAVE)ARM_A9_HPS.f2h_sdram1_clock,(SLAVE)Video_Subsystem.clk,(SLAVE)PLL_VGA.refclk,(SLAVE)Dot_Product.clock,(SLAVE)SRAM2.clk1,(SLAVE)SRAM1.clk1,(SLAVE)ARM_A9_HPS.h2f_axi_clock,(SLAVE)AV_Config.clk,(SLAVE)ARM_A9_HPS.f2h_axi_clock,(MASTER)System_PLL.sys_clk,(SLAVE)Clock_Bridge.in_clk,(SLAVE)SDRAM_Controller.clk) 1 1 7 470 400 NJ 520 1160 520 NJ 520 2050 420 2710 620 3120
+preplace netloc EXPORT<net_container>Computer_System</net_container>(MASTER)Computer_System.pixel_clk,(MASTER)Clock_Bridge.out_clk) 1 2 7 NJ 240 NJ 240 NJ 240 NJ 240 NJ 240 NJ 240 NJ
+preplace netloc EXPORT<net_container>Computer_System</net_container>(SLAVE)Computer_System.stream_control,(SLAVE)Video_Subsystem.stream_control) 1 0 2 NJ 120 NJ
+preplace netloc EXPORT<net_container>Computer_System</net_container>(SLAVE)Computer_System.memory,(SLAVE)ARM_A9_HPS.memory) 1 0 7 NJ 650 NJ 650 NJ 650 NJ 650 NJ 650 NJ 460 NJ
+preplace netloc EXPORT<net_container>Computer_System</net_container>(SLAVE)Computer_System.system_pll_ref_reset,(SLAVE)System_PLL.ref_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>Computer_System</net_container>(MASTER)Computer_System.pll_vga_clk_25,(MASTER)PLL_VGA.outclk0) 1 2 7 NJ 340 NJ 340 NJ 340 NJ 340 NJ 580 NJ 450 NJ
+preplace netloc EXPORT<net_container>Computer_System</net_container>(SLAVE)Computer_System.hps_io,(SLAVE)ARM_A9_HPS.hps_io) 1 0 7 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 NJ 440 NJ
+preplace netloc EXPORT<net_container>Computer_System</net_container>(MASTER)ARM_A9_HPS.h2f_reset,(MASTER)Computer_System.h2f_reset) 1 7 2 NJ 470 NJ
+preplace netloc EXPORT<net_container>Computer_System</net_container>(SLAVE)Computer_System.rgba_stream_reset,(SLAVE)Avalon_Frame_Writer.stream_reset_sink) 1 0 6 NJ 320 NJ 320 NJ 560 NJ 560 NJ 560 NJ
+preplace netloc EXPORT<net_container>Computer_System</net_container>(SLAVE)Computer_System.rgba_image_sink,(SLAVE)Avalon_Frame_Writer.conduit_end) 1 0 6 NJ 340 NJ 300 NJ 320 NJ 320 NJ 320 NJ
+preplace netloc INTERCONNECT<net_container>Computer_System</net_container>(MASTER)ARM_A9_HPS.h2f_axi_master,(SLAVE)SRAM1.s1,(SLAVE)SDRAM_Controller.s1,(MASTER)Dot_Product.avalon_master,(SLAVE)SRAM2.s1,(SLAVE)Avalon_Frame_Writer.avalon_slave) 1 5 4 2110 400 NJ 600 3100 350 3330
+levelinfo -pg 1 0 200 3570
+levelinfo -hier Computer_System 210 290 740 1120 1560 1970 2440 2850 3170 3350

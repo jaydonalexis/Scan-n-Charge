@@ -1,0 +1,248 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\scan-n-go\Hardware\Computer_System.qsys --block-symbol-file --output-directory=C:\scan-n-go\Hardware\Computer_System --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading Hardware/Computer_System.qsys
+Progress: Reading input file
+Progress: Adding ARM_A9_HPS [altera_hps 17.1]
+Progress: Parameterizing module ARM_A9_HPS
+Progress: Adding AV_Config [altera_up_avalon_audio_and_video_config 17.1]
+Progress: Parameterizing module AV_Config
+Progress: Adding Avalon_Frame_Writer [Video_In_Image_Writer 1.0]
+Progress: Parameterizing module Avalon_Frame_Writer
+Progress: Adding Clock_Bridge [altera_clock_bridge 17.1]
+Progress: Parameterizing module Clock_Bridge
+Progress: Adding Dot_Product [Dot_Product 1.0]
+Progress: Parameterizing module Dot_Product
+Progress: Adding PLL_VGA [altera_pll 17.1]
+Progress: Parameterizing module PLL_VGA
+Progress: Adding SDRAM_Controller [altera_avalon_new_sdram_controller 17.1]
+Progress: Parameterizing module SDRAM_Controller
+Progress: Adding SRAM1 [altera_avalon_onchip_memory2 17.1]
+Progress: Parameterizing module SRAM1
+Progress: Adding SRAM2 [altera_avalon_onchip_memory2 17.1]
+Progress: Parameterizing module SRAM2
+Progress: Adding System_ID [altera_avalon_sysid_qsys 17.1]
+Progress: Parameterizing module System_ID
+Progress: Adding System_PLL [altera_up_avalon_sys_sdram_pll 17.1]
+Progress: Parameterizing module System_PLL
+Progress: Adding Video_Subsystem [Video_In_Subsystem 1.0]
+Progress: Reading input file
+Progress: Adding Frame_Sync [Frame_Sync 1.0]
+Progress: Parameterizing module Frame_Sync
+Progress: Adding System_Clock [clock_source 17.1]
+Progress: Parameterizing module System_Clock
+Progress: Adding Video_In_Clipper [altera_up_avalon_video_clipper 17.1]
+Progress: Parameterizing module Video_In_Clipper
+Progress: Adding Video_In_Converter [altera_up_avalon_video_csc 17.1]
+Progress: Parameterizing module Video_In_Converter
+Progress: Adding Video_In_Decoder [altera_up_avalon_video_decoder 17.1]
+Progress: Parameterizing module Video_In_Decoder
+Progress: Adding Video_In_Feed_Forward [Feed_Forward 1.0]
+Progress: Parameterizing module Video_In_Feed_Forward
+Progress: Adding Video_In_Resampler [altera_up_avalon_video_chroma_resampler 17.1]
+Progress: Parameterizing module Video_In_Resampler
+Progress: Adding Video_In_Scaler [altera_up_avalon_video_scaler 17.1]
+Progress: Parameterizing module Video_In_Scaler
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Progress: Parameterizing module Video_Subsystem
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Computer_System.ARM_A9_HPS: HPS Main PLL counter settings: n = 0  m = 73
+Info: Computer_System.ARM_A9_HPS: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: Computer_System.ARM_A9_HPS: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: Computer_System.ARM_A9_HPS: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: Computer_System.ARM_A9_HPS: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: Computer_System.PLL_VGA: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Warning: Computer_System.PLL_VGA: Able to implement PLL - Actual settings differ from Requested settings
+Info: Computer_System.SDRAM_Controller: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: Computer_System.System_ID: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: Computer_System.System_ID: Time stamp will be automatically updated when this component is generated.
+Info: Computer_System.System_PLL: Refclk Freq: 50.0
+Info: Computer_System.Video_Subsystem.Video_In_Clipper: Change in Resolution: 720 x 244 -> 640 x 240
+Info: Computer_System.Video_Subsystem.Video_In_Converter: Colour Space Conversion: 8 (bits) x 3 (planes) (444 YCrCb) -> 8 (bits) x 3 (planes) (24-bit RGB)
+Info: Computer_System.Video_Subsystem.Video_In_Decoder: Video In Stream: Format: 720 x 244 (Odd Frames) or 720 x 243 (Even Frames) with Colour: 8 (bits) x 2 (planes) (YCrCb 4:2:2)
+Info: Computer_System.Video_Subsystem.Video_In_Resampler: Chroma Resampling: 8 (bits) x 2 (planes) -> 8 (bits) x 3 (planes)
+Info: Computer_System.Video_Subsystem.Video_In_Scaler: Change in Resolution: 640 x 240 -> 640 x 480
+Warning: Computer_System.ARM_A9_HPS: ARM_A9_HPS.f2h_sdram0_data must be connected to an Avalon-MM master
+Warning: Computer_System.System_ID: System_ID.control_slave must be connected to an Avalon-MM master
+Warning: Computer_System.: You have exported the interface Video_Subsystem.video_in_feed_forward_avalon_forward_sink but not its associated reset interface.  Export the driver(s) of Video_Subsystem.reset
+Warning: Computer_System.: You have exported the interface Video_Subsystem.video_in_scaler_avalon_scaler_source but not its associated reset interface.  Export Video_Subsystem.reset
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\scan-n-go\Hardware\Computer_System.qsys --synthesis=VERILOG --output-directory=C:\scan-n-go\Hardware\Computer_System\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading Hardware/Computer_System.qsys
+Progress: Reading input file
+Progress: Adding ARM_A9_HPS [altera_hps 17.1]
+Progress: Parameterizing module ARM_A9_HPS
+Progress: Adding AV_Config [altera_up_avalon_audio_and_video_config 17.1]
+Progress: Parameterizing module AV_Config
+Progress: Adding Avalon_Frame_Writer [Video_In_Image_Writer 1.0]
+Progress: Parameterizing module Avalon_Frame_Writer
+Progress: Adding Clock_Bridge [altera_clock_bridge 17.1]
+Progress: Parameterizing module Clock_Bridge
+Progress: Adding Dot_Product [Dot_Product 1.0]
+Progress: Parameterizing module Dot_Product
+Progress: Adding PLL_VGA [altera_pll 17.1]
+Progress: Parameterizing module PLL_VGA
+Progress: Adding SDRAM_Controller [altera_avalon_new_sdram_controller 17.1]
+Progress: Parameterizing module SDRAM_Controller
+Progress: Adding SRAM1 [altera_avalon_onchip_memory2 17.1]
+Progress: Parameterizing module SRAM1
+Progress: Adding SRAM2 [altera_avalon_onchip_memory2 17.1]
+Progress: Parameterizing module SRAM2
+Progress: Adding System_ID [altera_avalon_sysid_qsys 17.1]
+Progress: Parameterizing module System_ID
+Progress: Adding System_PLL [altera_up_avalon_sys_sdram_pll 17.1]
+Progress: Parameterizing module System_PLL
+Progress: Adding Video_Subsystem [Video_In_Subsystem 1.0]
+Progress: Parameterizing module Video_Subsystem
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Computer_System.ARM_A9_HPS: HPS Main PLL counter settings: n = 0  m = 73
+Info: Computer_System.ARM_A9_HPS: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: Computer_System.ARM_A9_HPS: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: Computer_System.ARM_A9_HPS: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: Computer_System.ARM_A9_HPS: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: Computer_System.PLL_VGA: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Warning: Computer_System.PLL_VGA: Able to implement PLL - Actual settings differ from Requested settings
+Info: Computer_System.SDRAM_Controller: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: Computer_System.System_ID: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: Computer_System.System_ID: Time stamp will be automatically updated when this component is generated.
+Info: Computer_System.System_PLL: Refclk Freq: 50.0
+Info: Computer_System.Video_Subsystem.Video_In_Clipper: Change in Resolution: 720 x 244 -> 640 x 240
+Info: Computer_System.Video_Subsystem.Video_In_Converter: Colour Space Conversion: 8 (bits) x 3 (planes) (444 YCrCb) -> 8 (bits) x 3 (planes) (24-bit RGB)
+Info: Computer_System.Video_Subsystem.Video_In_Decoder: Video In Stream: Format: 720 x 244 (Odd Frames) or 720 x 243 (Even Frames) with Colour: 8 (bits) x 2 (planes) (YCrCb 4:2:2)
+Info: Computer_System.Video_Subsystem.Video_In_Resampler: Chroma Resampling: 8 (bits) x 2 (planes) -> 8 (bits) x 3 (planes)
+Info: Computer_System.Video_Subsystem.Video_In_Scaler: Change in Resolution: 640 x 240 -> 640 x 480
+Warning: Computer_System.ARM_A9_HPS: ARM_A9_HPS.f2h_sdram0_data must be connected to an Avalon-MM master
+Warning: Computer_System.System_ID: System_ID.control_slave must be connected to an Avalon-MM master
+Warning: Computer_System.: You have exported the interface Video_Subsystem.video_in_feed_forward_avalon_forward_sink but not its associated reset interface.  Export the driver(s) of Video_Subsystem.reset
+Warning: Computer_System.: You have exported the interface Video_Subsystem.video_in_scaler_avalon_scaler_source but not its associated reset interface.  Export Video_Subsystem.reset
+Info: Computer_System: Generating Computer_System "Computer_System" for QUARTUS_SYNTH
+Info: Interconnect is inserted between master Avalon_Frame_Writer.avalon_master and slave ARM_A9_HPS.f2h_sdram1_data because the master has address signal 32 bit wide, but the slave is 28 bit wide.
+Info: Interconnect is inserted between master Avalon_Frame_Writer.avalon_master and slave ARM_A9_HPS.f2h_sdram1_data because the master has burstcount signal 7 bit wide, but the slave is 8 bit wide.
+Warning: ARM_A9_HPS.f2h_irq0: Cannot connect clock for irq_mapper.sender
+Warning: ARM_A9_HPS.f2h_irq0: Cannot connect reset for irq_mapper.sender
+Warning: ARM_A9_HPS.f2h_irq1: Cannot connect clock for irq_mapper_001.sender
+Warning: ARM_A9_HPS.f2h_irq1: Cannot connect reset for irq_mapper_001.sender
+Info: ARM_A9_HPS: "Running  for module: ARM_A9_HPS"
+Info: ARM_A9_HPS: HPS Main PLL counter settings: n = 0  m = 73
+Info: ARM_A9_HPS: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: ARM_A9_HPS: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: ARM_A9_HPS: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: ARM_A9_HPS: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: ARM_A9_HPS: "Computer_System" instantiated altera_hps "ARM_A9_HPS"
+Info: AV_Config: Starting Generation of Audio and Video Config
+Info: AV_Config: "Computer_System" instantiated altera_up_avalon_audio_and_video_config "AV_Config"
+Info: Avalon_Frame_Writer: "Computer_System" instantiated Video_In_Image_Writer "Avalon_Frame_Writer"
+Info: Dot_Product: "Computer_System" instantiated Dot_Product "Dot_Product"
+Info: PLL_VGA: "Computer_System" instantiated altera_pll "PLL_VGA"
+Info: SDRAM_Controller: Starting RTL generation for module 'Computer_System_SDRAM_Controller'
+Info: SDRAM_Controller:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=Computer_System_SDRAM_Controller --dir=C:/Users/jadan/AppData/Local/Temp/alt9517_9170003671739001198.dir/0244_SDRAM_Controller_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/jadan/AppData/Local/Temp/alt9517_9170003671739001198.dir/0244_SDRAM_Controller_gen//Computer_System_SDRAM_Controller_component_configuration.pl  --do_build_sim=0  ]
+Info: SDRAM_Controller: Done RTL generation for module 'Computer_System_SDRAM_Controller'
+Info: SDRAM_Controller: "Computer_System" instantiated altera_avalon_new_sdram_controller "SDRAM_Controller"
+Info: SRAM1: Starting RTL generation for module 'Computer_System_SRAM1'
+Info: SRAM1:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Computer_System_SRAM1 --dir=C:/Users/jadan/AppData/Local/Temp/alt9517_9170003671739001198.dir/0245_SRAM1_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/jadan/AppData/Local/Temp/alt9517_9170003671739001198.dir/0245_SRAM1_gen//Computer_System_SRAM1_component_configuration.pl  --do_build_sim=0  ]
+Info: SRAM1: Done RTL generation for module 'Computer_System_SRAM1'
+Info: SRAM1: "Computer_System" instantiated altera_avalon_onchip_memory2 "SRAM1"
+Info: SRAM2: Starting RTL generation for module 'Computer_System_SRAM2'
+Info: SRAM2:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Computer_System_SRAM2 --dir=C:/Users/jadan/AppData/Local/Temp/alt9517_9170003671739001198.dir/0246_SRAM2_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/jadan/AppData/Local/Temp/alt9517_9170003671739001198.dir/0246_SRAM2_gen//Computer_System_SRAM2_component_configuration.pl  --do_build_sim=0  ]
+Info: SRAM2: Done RTL generation for module 'Computer_System_SRAM2'
+Info: SRAM2: "Computer_System" instantiated altera_avalon_onchip_memory2 "SRAM2"
+Info: System_ID: "Computer_System" instantiated altera_avalon_sysid_qsys "System_ID"
+Info: System_PLL: "Computer_System" instantiated altera_up_avalon_sys_sdram_pll "System_PLL"
+Info: Video_Subsystem: "Computer_System" instantiated Video_In_Subsystem "Video_Subsystem"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "Computer_System" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_1: "Computer_System" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_2: "Computer_System" instantiated altera_mm_interconnect "mm_interconnect_2"
+Info: irq_mapper: "Computer_System" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "Computer_System" instantiated altera_reset_controller "rst_controller"
+Info: fpga_interfaces: "ARM_A9_HPS" instantiated altera_interface_generator "fpga_interfaces"
+Info: hps_io: "ARM_A9_HPS" instantiated altera_hps_io "hps_io"
+Info: sys_pll: "System_PLL" instantiated altera_pll "sys_pll"
+Info: reset_from_locked: "System_PLL" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
+Info: Frame_Sync: "Video_Subsystem" instantiated Frame_Sync "Frame_Sync"
+Info: Video_In_Clipper: Starting generation of the video clipper
+Info: Video_In_Clipper: "Video_Subsystem" instantiated altera_up_avalon_video_clipper "Video_In_Clipper"
+Info: Video_In_Converter: Starting Generation of Colour Space Converter
+Info: Video_In_Converter: "Video_Subsystem" instantiated altera_up_avalon_video_csc "Video_In_Converter"
+Info: Video_In_Decoder: Starting Generation of Video In Decoder
+Info: Video_In_Decoder: "Video_Subsystem" instantiated altera_up_avalon_video_decoder "Video_In_Decoder"
+Info: Video_In_Feed_Forward: "Video_Subsystem" instantiated Feed_Forward "Video_In_Feed_Forward"
+Info: Video_In_Resampler: Starting Generation of Chroma Resampler
+Info: Video_In_Resampler: "Video_Subsystem" instantiated altera_up_avalon_video_chroma_resampler "Video_In_Resampler"
+Info: Video_In_Scaler: Starting Generation of Video Scaler
+Info: Video_In_Scaler: "Video_Subsystem" instantiated altera_up_avalon_video_scaler "Video_In_Scaler"
+Info: Avalon_Frame_Writer_avalon_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "Avalon_Frame_Writer_avalon_master_translator"
+Info: ARM_A9_HPS_f2h_sdram1_data_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "ARM_A9_HPS_f2h_sdram1_data_translator"
+Info: Avalon_Frame_Writer_avalon_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "Avalon_Frame_Writer_avalon_master_agent"
+Info: ARM_A9_HPS_f2h_sdram1_data_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "ARM_A9_HPS_f2h_sdram1_data_agent"
+Info: ARM_A9_HPS_f2h_sdram1_data_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "ARM_A9_HPS_f2h_sdram1_data_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/scan-n-go/Hardware/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: ARM_A9_HPS_h2f_axi_master_agent: "mm_interconnect_1" instantiated altera_merlin_axi_master_ni "ARM_A9_HPS_h2f_axi_master_agent"
+Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_1" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_1" instantiated altera_merlin_router "router_003"
+Info: router_005: "mm_interconnect_1" instantiated altera_merlin_router "router_005"
+Info: router_006: "mm_interconnect_1" instantiated altera_merlin_router "router_006"
+Info: ARM_A9_HPS_h2f_axi_master_wr_limiter: "mm_interconnect_1" instantiated altera_merlin_traffic_limiter "ARM_A9_HPS_h2f_axi_master_wr_limiter"
+Info: Reusing file C:/scan-n-go/Hardware/Computer_System/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: SRAM1_s1_burst_adapter: "mm_interconnect_1" instantiated altera_merlin_burst_adapter "SRAM1_s1_burst_adapter"
+Info: Reusing file C:/scan-n-go/Hardware/Computer_System/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/scan-n-go/Hardware/Computer_System/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_002: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux_002"
+Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file C:/scan-n-go/Hardware/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_002: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux_002"
+Info: Reusing file C:/scan-n-go/Hardware/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_003: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux_003"
+Info: Reusing file C:/scan-n-go/Hardware/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_002: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux_002"
+Info: rsp_demux_003: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux_003"
+Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/scan-n-go/Hardware/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_002: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux_002"
+Info: Reusing file C:/scan-n-go/Hardware/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: ARM_A9_HPS_h2f_axi_master_wr_to_SRAM1_s1_cmd_width_adapter: "mm_interconnect_1" instantiated altera_merlin_width_adapter "ARM_A9_HPS_h2f_axi_master_wr_to_SRAM1_s1_cmd_width_adapter"
+Info: Reusing file C:/scan-n-go/Hardware/Computer_System/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/scan-n-go/Hardware/Computer_System/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: avalon_st_adapter: "mm_interconnect_1" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_002: "mm_interconnect_1" instantiated altera_avalon_st_adapter "avalon_st_adapter_002"
+Info: router: "mm_interconnect_2" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_2" instantiated altera_merlin_router "router_002"
+Info: cmd_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file C:/scan-n-go/Hardware/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/scan-n-go/Hardware/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter_002" instantiated error_adapter "error_adapter_0"
+Info: Computer_System: Done "Computer_System" with 70 modules, 159 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
